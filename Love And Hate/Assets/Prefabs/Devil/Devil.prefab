@@ -7,9 +7,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 274483627, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 274483627, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_Color.g
+      value: 0.88845205
+      objectReference: {fileID: 0}
+    - target: {fileID: 274483627, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746121183996594242, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: side
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6359697281132180428, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
       propertyPath: m_Name
-      value: Player (1)
+      value: Devil
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359697281132180428, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_TagString
+      value: Devil
       objectReference: {fileID: 0}
     - target: {fileID: 6359697281132180429, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
       propertyPath: m_RootOrder

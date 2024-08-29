@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 6359697279983150334}
   - component: {fileID: 6359697279983150338}
   - component: {fileID: 6359697279983150337}
+  - component: {fileID: 5547656824549140670}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -228,7 +229,7 @@ Transform:
   m_GameObject: {fileID: 6359697281132180428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 274483626}
@@ -248,6 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0510fdd151f594d47bdb6312ea3ca909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  side: 2
   movementSpeed: 12.5
   onFireAction:
     m_PersistentCalls:
@@ -255,7 +257,7 @@ MonoBehaviour:
       - m_Target: {fileID: 2497812068207863762}
         m_TargetAssemblyTypeName: Player.Weapon, Assembly-CSharp
         m_MethodName: Fire
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -332,6 +334,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &5547656824549140670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6359697281132180428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f7002d3dca1f94cba259c3d8959844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!1 &8872808421471525135
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,27 +400,3 @@ MonoBehaviour:
   speed: 20
   rangeInSeconds: 2
   damage: 2
-  spread:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 0
-    m_PostInfinity: 0
-    m_RotationOrder: 4

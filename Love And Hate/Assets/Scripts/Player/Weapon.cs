@@ -12,9 +12,8 @@ namespace Player
         [SerializeField] private float rangeInSeconds = 2f;
         [SerializeField] private float damage = 2f;
 
-        public void Fire()
+        public void Fire(Side side)
         {
-            Debug.Log("FIRING");
             var obj = pool.Get();
             obj.transform.position = barrel.position;
             var rb = obj.GetComponent<Rigidbody2D>();
@@ -23,6 +22,8 @@ namespace Player
             StartCoroutine(Cleanup(obj));
 
             var bullet = obj.GetComponent<Bullet>();
+            bullet.side = side;
+            bullet.damage = damage;
             bullet.onCollision += RemoveBullet;
         }
 

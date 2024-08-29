@@ -7,13 +7,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 274483626, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 274483627, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9299164
+      objectReference: {fileID: 0}
+    - target: {fileID: 274483627, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_Color.g
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 274483627, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746121183996594242, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: side
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6359697279983150334, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
       propertyPath: m_DefaultControlScheme
       value: Gamepad
       objectReference: {fileID: 0}
     - target: {fileID: 6359697281132180428, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Cupid
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359697281132180428, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_TagString
+      value: Cupid
       objectReference: {fileID: 0}
     - target: {fileID: 6359697281132180429, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
       propertyPath: m_RootOrder
@@ -57,6 +81,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6359697281132180429, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680995427059226518, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8872808421471525135, guid: 453e7033225e8cd4597f1d6761785228, type: 3}

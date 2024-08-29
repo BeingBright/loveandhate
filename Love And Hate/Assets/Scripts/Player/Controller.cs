@@ -11,10 +11,14 @@ namespace Player
         private PlayerInput _playerInput;
         private Rigidbody2D _rigidbody;
 
+        [SerializeField] private Side side;
+
         [Range(1, 100)] [SerializeField] private float movementSpeed = 1;
-        [SerializeField] private UnityEvent onFireAction;
+        [SerializeField] private UnityEvent<Side> onFireAction;
 
         [SerializeField] private Transform arm;
+
+        public int Health { get; private set; } = 100;
 
 
         private void Awake()
@@ -32,7 +36,6 @@ namespace Player
 
         private void Update()
         {
-            _rigidbody.rotation = _look.magnitude;
             arm.up = _look.normalized;
         }
 
@@ -53,7 +56,6 @@ namespace Player
             var a = context.control.device.name;
             if (a.Equals("Mouse"))
             {
-                // convert mouse position into world coordinates
                 Vector2 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 _look = (mouseWorldPosition - (Vector2)transform.position).normalized;
             }
@@ -67,7 +69,7 @@ namespace Player
         {
             if (!context.action.name.Equals("Fire")) return;
             if (context.action.phase != InputActionPhase.Performed) return;
-            onFireAction?.Invoke();
+            onFireAction?.Invoke(side);
         }
 
         private void OnDrawGizmos()
@@ -77,6 +79,11 @@ namespace Player
 
             Gizmos.color = Color.red;
             Gizmos.DrawRay(transform.position, _movement);
+        }
+
+        public void Attacked()
+        {
+            Health -= 1;
         }
     }
 }
