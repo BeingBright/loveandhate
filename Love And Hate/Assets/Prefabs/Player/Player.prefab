@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   side: 2
-  movementSpeed: 12.5
+  movementSpeed: 25
   onFireAction:
     m_PersistentCalls:
       m_Calls:
