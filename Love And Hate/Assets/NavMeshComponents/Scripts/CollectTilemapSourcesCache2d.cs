@@ -27,6 +27,9 @@ namespace NavMeshPlus.Extensions
             base.Awake();
         }
 
+#if UNITY_EDITOR
+
+
         private void OnTilemapTileChanged(Tilemap tilemap, Tilemap.SyncTile[] syncTiles)
         {
             if (tilemap == _tilemap)
@@ -34,7 +37,8 @@ namespace NavMeshPlus.Extensions
                 foreach (Tilemap.SyncTile syncTile in syncTiles)
                 {
                     Vector3Int position = syncTile.position;
-                    if (syncTile.tile != null && _modifierMap.TryGetValue(syncTile.tile, out NavMeshModifierTilemap.TileModifier tileModifier))
+                    if (syncTile.tile != null && _modifierMap.TryGetValue(syncTile.tile,
+                            out NavMeshModifierTilemap.TileModifier tileModifier))
                     {
                         int i = _lookup[position];
                         NavMeshBuildSource source = _sources[i];
@@ -51,10 +55,11 @@ namespace NavMeshPlus.Extensions
                 }
             }
         }
-
+#endif
         public AsyncOperation UpdateNavMesh(NavMeshData data)
         {
-            return NavMeshBuilder.UpdateNavMeshDataAsync(data, NavMeshSurfaceOwner.GetBuildSettings(), _sources, data.sourceBounds);
+            return NavMeshBuilder.UpdateNavMeshDataAsync(data, NavMeshSurfaceOwner.GetBuildSettings(), _sources,
+                data.sourceBounds);
         }
 
         public AsyncOperation UpdateNavMesh()
@@ -62,7 +67,8 @@ namespace NavMeshPlus.Extensions
             return UpdateNavMesh(NavMeshSurfaceOwner.navMeshData);
         }
 
-        public override void PostCollectSources(NavMeshSurface surface, List<NavMeshBuildSource> sources, NavMeshBuilderState navNeshState)
+        public override void PostCollectSources(NavMeshSurface surface, List<NavMeshBuildSource> sources,
+            NavMeshBuilderState navNeshState)
         {
             _sources = sources;
             if (_lookup == null)
@@ -75,13 +81,17 @@ namespace NavMeshPlus.Extensions
                     _lookup[position] = i;
                 }
             }
+#if UNITY_EDITOR
             Tilemap.tilemapTileChanged -= OnTilemapTileChanged;
             Tilemap.tilemapTileChanged += OnTilemapTileChanged;
+#endif
         }
 
         protected override void OnDestroy()
         {
+#if UNITY_EDITOR
             Tilemap.tilemapTileChanged -= OnTilemapTileChanged;
+#endif
             base.OnDestroy();
         }
     }
