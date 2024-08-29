@@ -71,6 +71,7 @@ public class NPC : MonoBehaviour
             var dist = Mathf.Clamp01(Vector3.Distance(transform.position, _target.position) - distanceFromTarget);
             _agent.speed = ((speed + offset * spread.Evaluate(_randSpeed)) * dist);
         }
+
         var distance = Vector3.Distance(_target.position, transform.position);
         if (distance <= distanceFromTarget && !_attacking)
         {
@@ -87,6 +88,7 @@ public class NPC : MonoBehaviour
         onAttack?.Invoke();
         var player = _target.GetComponent<Controller>();
         player.Attacked();
+        _agent.velocity = -transform.up * attackForce + transform.right;
 
         yield return new WaitForSeconds(attackSpeed);
         _attacking = false;
