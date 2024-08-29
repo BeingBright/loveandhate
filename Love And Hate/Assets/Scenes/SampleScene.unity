@@ -559,7 +559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.8065429, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1697,7 +1697,7 @@ MonoBehaviour:
   - {fileID: 1127245946}
   - {fileID: 715109955}
   maxCount: 125
-  spawnDelay: 0.01
+  spawnDelay: 1
   randomSpawn: 1
   prefab: {fileID: 1960100153502135142, guid: decad2df0acd1f54381deb8f4f068c83, type: 3}
 --- !u!4 &1402203963
@@ -2111,7 +2111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.5330188, b: 0.8325543, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2455,11 +2455,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3827622773918541957, guid: 7594233074c53744f9b2b52c0dcb6724, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.85
+      value: -33
       objectReference: {fileID: 0}
     - target: {fileID: 3827622773918541957, guid: 7594233074c53744f9b2b52c0dcb6724, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.23
+      value: 24.1
       objectReference: {fileID: 0}
     - target: {fileID: 3827622773918541957, guid: 7594233074c53744f9b2b52c0dcb6724, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2516,11 +2516,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4868908533704798868, guid: 5d929abd7e54d9b49a232ac25512f0d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 45.3
       objectReference: {fileID: 0}
     - target: {fileID: 4868908533704798868, guid: 5d929abd7e54d9b49a232ac25512f0d0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -26.7
       objectReference: {fileID: 0}
     - target: {fileID: 4868908533704798868, guid: 5d929abd7e54d9b49a232ac25512f0d0, type: 3}
       propertyPath: m_LocalPosition.z

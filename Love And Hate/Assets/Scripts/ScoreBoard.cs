@@ -5,6 +5,7 @@ using System.Linq;
 using Player;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoreBoard : MonoBehaviour
 {
@@ -28,5 +29,14 @@ public class ScoreBoard : MonoBehaviour
 
         devilScore.text = devil.Health.ToString();
         cupidScore.text = cupid.Health.ToString();
+
+        if (devil.Health <= 0)
+        {
+            SceneManager.LoadScene("DevilWin");
+        }
+        else if (cupid.Health <= 0)
+        {
+            SceneManager.LoadScene("CupidWin");
+        }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -84,6 +85,13 @@ namespace Player
         public void Attacked()
         {
             Health -= 1;
+        }
+
+        private void OnDestroy()
+        {
+            _playerInput.onActionTriggered -= OnMove;
+            _playerInput.onActionTriggered -= OnLook;
+            _playerInput.onActionTriggered -= OnFire;
         }
     }
 }

@@ -11,6 +11,7 @@ using Rigidbody2D = UnityEngine.Rigidbody2D;
 public class NPC : MonoBehaviour
 {
     private Transform _target;
+    private Vector3 _wanderPoint;
     private float _randSpeed;
     private bool _attacking = false;
     private Rigidbody2D _rb;
@@ -59,27 +60,46 @@ public class NPC : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Start()
+    {
+        StartCoroutine(NewPoint());
+    }
+
+    private IEnumerator NewPoint()
+    {
+        while (true)
+        {
+            _wanderPoint = Random.insideUnitSphere * 8f;
+            yield return new WaitForSeconds(4f);
+        }
+    }
 
     private void Update()
     {
-        if (!_target) return;
-
-        _agent.SetDestination(_target.position);
-
-        if (!_attacking)
+        if (!_target)
         {
-            var dist = Mathf.Clamp01(Vector3.Distance(transform.position, _target.position) - distanceFromTarget);
-            _agent.speed = ((speed + offset * spread.Evaluate(_randSpeed)) * dist);
+            _agent.SetDestination(transform.position + _wanderPoint);
         }
-        var distance = Vector3.Distance(_target.position, transform.position);
-        if (distance <= distanceFromTarget && !_attacking)
+        else
         {
-            _attacking = true;
-            StartCoroutine(Attacking());
-        }
+            _agent.SetDestination(_target.position);
 
-        var dir = ((Vector2)_target.position - (Vector2)transform.position).normalized;
-        transform.up = dir;
+            if (!_attacking)
+            {
+                var dist = Mathf.Clamp01(Vector3.Distance(transform.position, _target.position) - distanceFromTarget);
+                _agent.speed = ((speed + offset * spread.Evaluate(_randSpeed)) * dist);
+            }
+
+            var distance = Vector3.Distance(_target.position, transform.position);
+            if (distance <= distanceFromTarget && !_attacking)
+            {
+                _attacking = true;
+                StartCoroutine(Attacking());
+            }
+
+            var dir = ((Vector2)_target.position - (Vector2)transform.position).normalized;
+            transform.up = dir;
+        }
     }
 
     private IEnumerator Attacking()
@@ -87,6 +107,7 @@ public class NPC : MonoBehaviour
         onAttack?.Invoke();
         var player = _target.GetComponent<Controller>();
         player.Attacked();
+        _agent.velocity = -transform.up * attackForce + transform.right;
 
         yield return new WaitForSeconds(attackSpeed);
         _attacking = false;
