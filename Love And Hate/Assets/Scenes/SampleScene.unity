@@ -1697,7 +1697,7 @@ MonoBehaviour:
   - {fileID: 1127245946}
   - {fileID: 715109955}
   maxCount: 125
-  spawnDelay: 0.01
+  spawnDelay: 1
   randomSpawn: 1
   prefab: {fileID: 1960100153502135142, guid: decad2df0acd1f54381deb8f4f068c83, type: 3}
 --- !u!4 &1402203963
