@@ -18,6 +18,8 @@ namespace Player
 
         [SerializeField] private Transform arm;
 
+        public int Health { get; private set; } = 100;
+
 
         private void Awake()
         {
@@ -54,7 +56,6 @@ namespace Player
             var a = context.control.device.name;
             if (a.Equals("Mouse"))
             {
-                // convert mouse position into world coordinates
                 Vector2 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 _look = (mouseWorldPosition - (Vector2)transform.position).normalized;
             }
@@ -78,6 +79,11 @@ namespace Player
 
             Gizmos.color = Color.red;
             Gizmos.DrawRay(transform.position, _movement);
+        }
+
+        public void Attacked()
+        {
+            Health -= 1;
         }
     }
 }

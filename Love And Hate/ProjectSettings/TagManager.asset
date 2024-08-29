@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cupid
   - Devil
+  - NPC
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,7 @@ namespace Spawner
         private int _count;
 
 
-        private void Start()
+        private void Awake()
         {
             for (int i = 0; i < maxCount; i++)
             {
