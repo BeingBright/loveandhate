@@ -11,8 +11,10 @@ namespace Player
         private PlayerInput _playerInput;
         private Rigidbody2D _rigidbody;
 
+        [SerializeField] private Side side;
+
         [Range(1, 100)] [SerializeField] private float movementSpeed = 1;
-        [SerializeField] private UnityEvent onFireAction;
+        [SerializeField] private UnityEvent<Side> onFireAction;
 
         [SerializeField] private Transform arm;
 
@@ -32,7 +34,6 @@ namespace Player
 
         private void Update()
         {
-            _rigidbody.rotation = _look.magnitude;
             arm.up = _look.normalized;
         }
 
@@ -67,7 +68,7 @@ namespace Player
         {
             if (!context.action.name.Equals("Fire")) return;
             if (context.action.phase != InputActionPhase.Performed) return;
-            onFireAction?.Invoke();
+            onFireAction?.Invoke(side);
         }
 
         private void OnDrawGizmos()
