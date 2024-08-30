@@ -5950,6 +5950,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5422460342161658634, guid: 7594233074c53744f9b2b52c0dcb6724, type: 3}
+      propertyPath: Health
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5761896741075696794, guid: 7594233074c53744f9b2b52c0dcb6724, type: 3}
       propertyPath: pool
       value: 
@@ -5972,6 +5976,10 @@ PrefabInstance:
       propertyPath: pool
       value: 
       objectReference: {fileID: 2010701663}
+    - target: {fileID: 4454014755836512539, guid: 5d929abd7e54d9b49a232ac25512f0d0, type: 3}
+      propertyPath: Health
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4868908533704798868, guid: 5d929abd7e54d9b49a232ac25512f0d0, type: 3}
       propertyPath: m_RootOrder
       value: 4
