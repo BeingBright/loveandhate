@@ -9,13 +9,13 @@ namespace Spawner
     public class SpawnController : MonoBehaviour
     {
         [SerializeField] private List<Transform> points = new();
-        [SerializeField] private int maxCount;
+        public int maxCount;
         [SerializeField] private float spawnDelay = 1f;
         [SerializeField] private bool randomSpawn;
         [SerializeField] private GameObject prefab;
 
 
-        private int _count;
+        public int Count { get; private set; }
 
 
         private void Awake()
@@ -38,6 +38,7 @@ namespace Spawner
                     randIndex = i % points.Count;
                 }
 
+                Count = i;
                 obj.transform.position = points[randIndex].transform.position;
                 yield return new WaitForSeconds(spawnDelay);
             }

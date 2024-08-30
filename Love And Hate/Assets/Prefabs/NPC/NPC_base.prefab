@@ -55,8 +55,8 @@ MonoBehaviour:
   attackSpeed: 2
   attackForce: 10
   distanceFromTarget: 3
-  speed: 6
-  offset: 8
+  speed: 12
+  offset: 16
   spread:
     serializedVersion: 2
     m_Curve:
