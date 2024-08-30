@@ -40,11 +40,11 @@ public class ScoreBoard : MonoBehaviour
         devilScore.text = devil.Health.ToString();
         cupidScore.text = cupid.Health.ToString();
 
-        if (devil.Health <= 0)
+        if (cupid.Health <= 0)
         {
             SceneManager.LoadScene("DevilWin");
         }
-        else if (cupid.Health <= 0)
+        else if (devil.Health <= 0)
         {
             SceneManager.LoadScene("CupidWin");
         }
