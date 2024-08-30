@@ -16,6 +16,7 @@ namespace Player
         {
             var obj = pool.Get();
             obj.transform.position = barrel.position;
+            obj.transform.right = -barrel.up;
             var rb = obj.GetComponent<Rigidbody2D>();
             rb.velocity = barrel.up * speed;
             StopCoroutine(Cleanup(obj));
