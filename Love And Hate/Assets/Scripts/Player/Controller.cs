@@ -19,7 +19,7 @@ namespace Player
 
         [SerializeField] private Transform arm;
 
-        public int Health { get; private set; } = 100;
+        public int Health = 100;
 
 
         private void Awake()
