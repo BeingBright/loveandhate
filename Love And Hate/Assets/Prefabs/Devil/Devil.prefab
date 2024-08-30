@@ -7,21 +7,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 274483625, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 274483626, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 274483626, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 274483626, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 274483627, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1601188454, guid: 171edd387cefd7e4aa2120158b67d27d, type: 3}
     - target: {fileID: 274483627, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 274483627, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
       propertyPath: m_Color.g
-      value: 0.88845205
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 274483627, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 31305998919923473, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2746121183996594242, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
       propertyPath: side
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526037849252473906, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6359697281132180428, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
       propertyPath: m_Name
@@ -37,11 +65,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6359697281132180429, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 25.5
       objectReference: {fileID: 0}
     - target: {fileID: 6359697281132180429, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 6359697281132180429, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
       propertyPath: m_LocalPosition.z
@@ -79,5 +107,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arm
       objectReference: {fileID: 0}
+    - target: {fileID: 8872808421471525135, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+--- !u!1 &2005219456408439024 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 274483625, guid: 453e7033225e8cd4597f1d6761785228, type: 3}
+  m_PrefabInstance: {fileID: 2005219456136053081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &887978282
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005219456408439024}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f0acb30ab4f58044ab7009fc21c6d201, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
